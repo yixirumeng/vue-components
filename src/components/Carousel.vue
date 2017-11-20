@@ -1,18 +1,25 @@
 <template>
     <div class="slide-show" @mouseover="overRun" @mouseout="outRun" :style="cansouelStyle">
-        <transition-group tag="ul" class="slide-ul" :name="name">
+        <transition-group tag="ul" class="slide-ul" :name="name" v-if="imgForm=='image'">
             <li v-for="(item, index) in slides" :key="index" v-show="index===nowIndex">
                 <a :href="item.href" :target="target">
                     <img :src="item.src" alt="">
                 </a>
             </li>
         </transition-group>
-        <ul class="slide-pages" :style="focusUl">
+        <transition-group tag="ul" class="slide-ul" :name="name" v-else-if="imgForm=='bg'">
+            <li v-for="(item, index) in slides" :key="index" v-show="index===nowIndex">
+                <a class="imgHref" :href="item.href" :target="target" :style="{background: `url(${item.src}) center no-repeat`}">
+                </a>
+            </li>
+        </transition-group>
+
+        <ul class="slide-pages" :style="focusUl" v-if="signShow">
             <li v-for="(item, index) in slides" :key="index" @click="goto(index)" class="slide-page-point">
                 <a :class="{'active': index === nowIndex}" :style="focusSign">{{index + 1}}</a>
             </li>
         </ul>
-        <div class="control-wrapper">
+        <div class="control-wrapper" v-if="arrowShow">
             <a class="prev" @click="goto(prevIndex)" :style="arrowLeft"></a>
             <a class="next" @click="goto(nextIndex)" :style="arrowRight"></a>
         </div>
@@ -39,6 +46,18 @@
                 default: "_blank"
             },
             autoPlay: {
+                type: Boolean,
+                default: true
+            },
+            imgForm: {
+                type: String,
+                default: "image"
+            },
+            signShow: {
+                type: Boolean,
+                default: true
+            },
+            arrowShow: {
                 type: Boolean,
                 default: true
             },
@@ -201,6 +220,11 @@
         height: 100%;
         position: absolute;
         img{
+            width: 100%;
+            height: 100%;
+        }
+        a.imgHref{
+            display: block;
             width: 100%;
             height: 100%;
         }

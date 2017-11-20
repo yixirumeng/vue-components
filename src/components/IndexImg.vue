@@ -1,6 +1,6 @@
 <template>
     <div>
-        <carsouel :slides="slides" :name="transitionName1" :autoPlay="false"></carsouel>
+        <carsouel :slides="slides" :name="transitionName1" :imgForm="'bg'"></carsouel>
         <carsouel :slides="slides" :name="transitionName2"></carsouel>
     </div>
 </template>
