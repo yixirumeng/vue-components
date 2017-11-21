@@ -4,6 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import hljs from 'highlight.js'
+import 'highlight.js/styles/googlecode.css'
+
+Vue.directive('highlight', function(el) {
+    let blocks = el.querySelectorAll('pre code');
+    blocks.forEach((block) => {
+        hljs.highlightBlock(block)
+    })
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

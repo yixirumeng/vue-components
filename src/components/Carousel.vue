@@ -1,13 +1,13 @@
 <template>
-    <div class="slide-show" @mouseover="overRun" @mouseout="outRun" :style="cansouelStyle">
-        <transition-group tag="ul" class="slide-ul" :name="name" v-if="imgForm=='image'">
+    <div class="slide-show" @mouseover="overRun" @mouseout="outRun" :style="carouselStyle">
+        <transition-group tag="ul" class="slide-ul" :name="transformation" v-if="imgForm=='image'">
             <li v-for="(item, index) in slides" :key="index" v-show="index===nowIndex">
                 <a :href="item.href" :target="target">
                     <img :src="item.src" alt="">
                 </a>
             </li>
         </transition-group>
-        <transition-group tag="ul" class="slide-ul" :name="name" v-else-if="imgForm=='bg'">
+        <transition-group tag="ul" class="slide-ul" :name="transformation" v-else-if="imgForm=='bg'">
             <li v-for="(item, index) in slides" :key="index" v-show="index===nowIndex">
                 <a class="imgHref" :href="item.href" :target="target" :style="{background: `url(${item.src}) center no-repeat`}">
                 </a>
@@ -37,7 +37,7 @@
                 type: Number,
                 default: 3000
             },
-            name: {
+            transformation: {
                 type: String,
                 default: "move"
             },
@@ -61,11 +61,11 @@
                 type: Boolean,
                 default: true
             },
-            cansouelStyle:{
+            carouselStyle:{
                 tyle: Object,
                 default: ()=>{
                     return { 
-                        width: "100%",
+                        width: "800px",
                         height: "450px"
                     }
                 }
@@ -97,7 +97,8 @@
         },
         data(){
             return {
-                nowIndex: 0
+                nowIndex: 0,
+                signActive: this.signActive
             }
         },
         computed: {
@@ -150,7 +151,7 @@
 .slide-pages{
     position: absolute;
     width: 100%;
-    bottom: 20px;
+    bottom: 30px;
     text-align: center;
     line-height: 1;
     li{
@@ -171,7 +172,6 @@
             &.active{
                 background: #fff;
                 opacity: .4;
-                border-color: #757575;
                 border-color: rgba(0, 0, 0, .4);
             }
         }

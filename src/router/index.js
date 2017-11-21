@@ -1,13 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import IndexImg from '@/components/IndexImg'
+import Home from '@/components/examples/Home'
+import CarouselEg from '@/components/examples/CarouselEg'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
-        path: '/',
-        name: 'IndexImg',
-        component: IndexImg
-    }]
+            path: '/',
+            name: 'Home',
+            component: Home
+        },
+        {
+            path: '/carousel',
+            name: 'CarouselEg',
+            component: CarouselEg
+        }
+    ]
 })
