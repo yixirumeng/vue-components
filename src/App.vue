@@ -59,31 +59,27 @@ table {
 
 .usage-title {
     color: $fontColor;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    line-height: 40px;
     font-size: 18px;
 }
 
-.usage {
-    color: #000;
-    background: rgba(0, 0, 0, .3);
-    div {
-        padding-left: 2em;
-        padding-top: 5px;
-    }
-    pre {
-        margin: 0;
-        code {
-            background: transparent;
-            padding: 0;
-        }
-    }
+.usage .usage-intro{
+    padding-left: 2em;
+    padding-top: 5px;
+    color: $fontColor;
 }
 
 .comTitle {
     text-align: center;
     color: $fontColor;
     font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.comSubTitle{
+    color: $fontColor;
+    font-size: 20px;
+    text-align: center;
     padding-bottom: 15px;
 }
 

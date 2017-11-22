@@ -3,21 +3,21 @@
         <div class="comTitle">轮播图组件</div>
         <carsouel :slides="slides" :transformation="transitionName1" :carouselStyle="carouselStyle"></carsouel>
         <carsouel :slides="slides" :transformation="transitionName2" :carouselStyle="carouselStyle"></carsouel>
-        <div class="usage-title">组件用法：</div>
+        <div class="usage-title">Code：</div>
         <div class="usage" v-highlight>
-            <div>首先引入Carousel.vue组件</div>
+            <div class="usage-intro">1、首先引入Carousel.vue组件</div>
             <pre>
                 <code>
                     {{html1}}
                 </code>
             </pre>
-            <div>在模板文件调用，并传入需要的API参数</div>
+            <div class="usage-intro">2、在模板文件调用，并传入需要的API参数</div>
             <pre>
                 <code>
                     {{html2}}
                 </code>
             </pre>
-            <div>参数的值可以通过data(){}函数返回，这样书写起来更加方便</div>
+            <div class="usage-intro">3、参数的值可以通过data(){}函数返回，这样书写起来更加方便</div>
             <pre>
                 <code>
                     {{html3}}
