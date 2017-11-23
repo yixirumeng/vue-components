@@ -7,7 +7,9 @@
             <li>
                 <router-link to="/hoverFold">悬浮伸展组件&nbsp;&nbsp;&gt;&gt;</router-link>
             </li>
-            <li></li>
+            <li>
+                <router-link to="/hoverPop">悬浮弹出组件&nbsp;&nbsp;&gt;&gt;</router-link>
+            </li>
             <li></li>
         </ul>
     </div>

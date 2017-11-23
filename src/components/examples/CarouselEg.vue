@@ -1,7 +1,9 @@
 <template>
     <div class="carousel-sum">
         <div class="comTitle">轮播图组件</div>
+        <div class="comSubTitle">move</div>
         <carsouel :slides="slides" :transformation="transitionName1" :carouselStyle="carouselStyle"></carsouel>
+        <div class="comSubTitle">fade</div>
         <carsouel :slides="slides" :transformation="transitionName2" :carouselStyle="carouselStyle"></carsouel>
         <div class="usage-title">Code：</div>
         <div class="usage" v-highlight>
