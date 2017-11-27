@@ -4,6 +4,7 @@ import Home from '@/components/examples/Home'
 import CarouselEg from '@/components/examples/CarouselEg'
 import HoverFoldEg from '@/components/examples/HoverFoldEg'
 import HoverPopEg from '@/components/examples/HoverPopEg'
+import ClickEnlargeEg from '@/components/examples/ClickEnlargeEg'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
             path: '/hoverPop',
             name: 'HoverPopEg',
             component: HoverPopEg
+        },
+        {
+            path: '/clickEnlarge',
+            name: 'ClickEnlargeEg',
+            component: ClickEnlargeEg
         }
     ]
 })
