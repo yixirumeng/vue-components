@@ -57,6 +57,17 @@ table {
     }
 }
 
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+    overflow: hidden;
+}
+
 .usage-title {
     color: $fontColor;
     line-height: 40px;

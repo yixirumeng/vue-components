@@ -13,6 +13,9 @@
             <li>
                 <router-link to="/clickEnlarge">点击放大弹出组件&nbsp;&nbsp;&gt;&gt;</router-link>
             </li>
+            <li>
+                <router-link to="/DropDown">下拉菜单组件&nbsp;&nbsp;&gt;&gt;</router-link>
+            </li>
         </ul>
     </div>
 </template>
