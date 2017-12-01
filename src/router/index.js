@@ -6,6 +6,7 @@ import HoverFoldEg from '@/components/examples/HoverFoldEg'
 import HoverPopEg from '@/components/examples/HoverPopEg'
 import ClickEnlargeEg from '@/components/examples/ClickEnlargeEg'
 import DropDownEg from '@/components/examples/DropDownEg'
+import SwitchEg from '@/components/examples/SwitchEg'
 
 Vue.use(Router)
 
@@ -36,9 +37,14 @@ export default new Router({
             component: ClickEnlargeEg
         },
         {
-            path: '/DropDown',
+            path: '/dropDown',
             name: 'DropDownEg',
             component: DropDownEg
+        },
+        {
+            path: '/switch',
+            name: 'SwitchEg',
+            component: SwitchEg
         }
     ]
 })

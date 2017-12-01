@@ -14,7 +14,10 @@
                 <router-link to="/clickEnlarge">点击放大弹出组件&nbsp;&nbsp;&gt;&gt;</router-link>
             </li>
             <li>
-                <router-link to="/DropDown">下拉菜单组件&nbsp;&nbsp;&gt;&gt;</router-link>
+                <router-link to="/dropDown">下拉菜单组件&nbsp;&nbsp;&gt;&gt;</router-link>
+            </li>
+            <li>
+                <router-link to="/switch">开关组件&nbsp;&nbsp;&gt;&gt;</router-link>
             </li>
         </ul>
     </div>
