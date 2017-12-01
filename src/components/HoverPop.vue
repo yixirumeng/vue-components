@@ -46,7 +46,7 @@
     .pop-intro{
         position: absolute;
         left: 0;
-        top: -40px;
+        top: -36px;
         font-size: 12px;
         text-align: center;
         color: #fff;
