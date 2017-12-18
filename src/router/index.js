@@ -7,6 +7,7 @@ import HoverPopEg from '@/components/examples/HoverPopEg'
 import ClickEnlargeEg from '@/components/examples/ClickEnlargeEg'
 import DropDownEg from '@/components/examples/DropDownEg'
 import SwitchEg from '@/components/examples/SwitchEg'
+import Svg from '@/components/Svg'
 
 Vue.use(Router)
 
@@ -45,6 +46,11 @@ export default new Router({
             path: '/switch',
             name: 'SwitchEg',
             component: SwitchEg
+        },
+        {
+            path: '/svg',
+            name: 'Svg',
+            component: Svg
         }
     ]
 })
